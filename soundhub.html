@@ -1,0 +1,3149 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marko Junior - Músico Profissional | DJ e Música ao Vivo para Eventos</title>
+    <meta name="description" content="Marko Junior - Músico profissional com 20+ anos de experiência para casamentos, eventos corporativos e festas. DJ e música ao vivo em Ituverava-SP e região.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Marko Junior - Músico Profissional | DJ e Shows">
+    <meta property="og:description" content="Transforme seu evento com a trilha sonora perfeita - Mais de 20 anos de experiência">
+    <meta property="og:image" content="imagens/1000022917.jpg">
+    <meta property="og:url" content="https://markojunior.com">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Schema Markup para Eventos Musicais -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MusicGroup",
+        "name": "Marko Junior",
+        "description": "DJ e músico profissional com mais de 20 anos de experiência para casamentos, eventos corporativos e festas",
+        "url": "https://markojunior.com",
+        "genre": ["Pop", "Rock", "MPB", "Sertanejo", "Eletrônica"],
+        "areaServed": "Ituverava-SP e região",
+        "email": "cantormarcojunior@gmail.com",
+        "telephone": "+5516992659919",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ituverava",
+            "addressRegion": "SP"
+        },
+        "serviceType": "Musical Entertainment",
+        "offers": {
+            "@type": "Offer",
+            "description": "Serviços de DJ e música ao vivo para eventos"
+        }
+    }
+    </script>
+     <style>
+        :root {
+            --laranja-principal: #FF6B00;
+            --laranja-claro: #FF8C33;
+            --laranja-escuro: #E55D00;
+            --roxo-principal: #6A0DAD;
+            --roxo-claro: #8B46D6;
+            --roxo-escuro: #4C0082;
+            --cinza-escuro: #1A1A1A;
+            --cinza-medio: #2D2D2D;
+            --cinza-claro: #F5F5F5;
+            --branco: #FFFFFF;
+            --preto: #000000;
+            --degrade-principal: linear-gradient(135deg, var(--laranja-principal) 0%, var(--roxo-principal) 100%);
+            --degrade-secundario: linear-gradient(135deg, var(--roxo-principal) 0%, var(--laranja-principal) 100%);
+            --degrade-dourado: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--cinza-escuro);
+            background-color: var(--branco);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Loader Aprimorado */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--degrade-principal);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-content {
+            text-align: center;
+            color: var(--branco);
+        }
+
+        .loader-spinner {
+            width: 80px;
+            height: 80px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--branco);
+            animation: spin 1s ease-in-out infinite;
+            margin: 0 auto 20px;
+        }
+
+        .loader-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        /* Header e Navegação Aprimorados */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+            background-color: rgba(26, 26, 26, 0.95);
+            color: var(--branco);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        header.scrolled {
+            padding: 0.8rem 2rem;
+            background-color: rgba(10, 10, 10, 0.98);
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            background: var(--degrade-principal);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.2rem;
+            font-weight: 800;
+        }
+
+        .logo p {
+            font-size: 0.8rem;
+            color: var(--branco);
+            opacity: 0.8;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+        
+        nav a {
+            color: var(--branco);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+        
+        nav a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background: var(--degrade-principal);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+        
+        nav a:hover:after {
+            width: 100%;
+        }
+        
+        nav a:hover {
+            color: var(--laranja-principal);
+        }
+
+        .menu-mobile {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--branco);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-mobile:hover {
+            transform: scale(1.1);
+        }
+
+        /* Hero Section Aprimorada */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("imagens/IMG_5601[1].JPG");
+            background-size: cover;
+            background-position: 50% 26%;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--branco);
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--degrade-principal);
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+
+        .hero-content h2 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 1s ease;
+            font-weight: 800;
+            line-height: 1.1;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1.2s ease;
+            opacity: 0.9;
+        }
+
+        .botoes {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            animation: fadeInUp 1.4s ease;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2.5rem;
+            background: var(--degrade-principal);
+            color: var(--branco);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.4s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(255, 107, 0, 0.4);
+            font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .btn:hover:before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 107, 0, 0.6);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--branco);
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: var(--branco);
+            color: var(--roxo-principal);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        /* NOVO: Contador de Visitantes */
+        .contador-visitantes {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 15px 25px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            animation: fadeInUp 1.6s ease;
+        }
+
+        .contador-visitantes i {
+            color: var(--laranja-principal);
+        }
+
+        /* Redes Sociais no Hero */
+        .hero-social {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            animation: fadeInUp 1.6s ease;
+            margin-top: 2rem;
+        }
+
+        .hero-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--branco);
+            text-decoration: none;
+            transition: all 0.4s ease;
+            font-size: 1.4rem;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-social a:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .hero-social a:hover:before {
+            left: 100%;
+        }
+
+        .hero-social a:hover {
+            transform: translateY(-5px) scale(1.1);
+            background: var(--degrade-principal);
+            border-color: transparent;
+            box-shadow: 0 10px 25px rgba(255, 107, 0, 0.4);
+        }
+
+        .hero-social a.instagram:hover {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+
+        .hero-social a.youtube:hover {
+            background: #FF0000;
+        }
+
+        .hero-social a.whatsapp:hover {
+            background: #25D366;
+        }
+
+        /* CTA Destaque Aprimorado */
+        .cta-destaque {
+            background: var(--degrade-principal);
+            padding: 80px 0;
+            text-align: center;
+            color: var(--branco);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-destaque::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.05"><polygon fill="%23FFFFFF" points="500,0 1000,500 500,1000 0,500"/></svg>');
+            background-size: cover;
+        }
+
+        .cta-destaque .btn {
+            background: var(--branco);
+            color: var(--roxo-principal);
+            font-size: 1.3rem;
+            padding: 1.2rem 3rem;
+            margin: 0 15px;
+            font-weight: 700;
+        }
+
+        .cta-destaque .btn:hover {
+            background: var(--cinza-claro);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Sobre Section */
+        .sobre {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--cinza-escuro) 0%, var(--preto) 100%);
+            color: var(--branco);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sobre::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.03"><polygon fill="%23FFFFFF" points="0,1000 1000,0 1000,1000"/></svg>');
+            background-size: cover;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            background: var(--degrade-principal);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            padding-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--degrade-principal);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            margin-bottom: 70px;
+            color: var(--branco);
+            opacity: 0.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .sobre-conteudo {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-top: 50px;
+        }
+
+        .sobre-texto {
+            flex: 1;
+        }
+
+        .sobre-texto p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 35px;
+            color: var(--branco);
+        }
+        
+        .estatisticas {
+            display: flex;
+            gap: 50px;
+            margin-top: 40px;
+            justify-content: space-between;
+        }
+
+        .estatistica-item {
+            text-align: center;
+            flex: 1;
+        }
+
+        .numero {
+            display: block;
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: var(--degrade-principal);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .label {
+            font-size: 1.1rem;
+            color: var(--branco);
+            opacity: 0.8;
+            font-weight: 500;
+        }
+
+        .sobre-imagem {
+            flex: 1;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 0.5s ease;
+        }
+
+        .sobre-imagem:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        .sobre-imagem img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .sobre-imagem:hover img {
+            transform: scale(1.05);
+        }
+
+        /* NOVA SEÇÃO: Diferenciais */
+        .diferenciais {
+            padding: 100px 0;
+            background: var(--cinza-claro);
+        }
+
+        .diferenciais-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .diferencial-card {
+            background: var(--branco);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .diferencial-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--degrade-principal);
+        }
+
+        .diferencial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .diferencial-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--degrade-principal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: var(--branco);
+        }
+
+        .diferencial-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--roxo-principal);
+        }
+
+        /* Repertório Section - COMPLETAMENTE REFEITA */
+        .repertorio {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--cinza-escuro) 0%, var(--preto) 100%);
+            color: var(--branco);
+            position: relative;
+        }
+
+        .repertorio::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.03"><path fill="%23FFFFFF" d="M500,100 C700,50 800,200 900,300 C1000,400 900,600 700,700 C500,800 300,700 200,600 C100,500 200,300 300,200 C400,100 500,150 500,100 Z"/></svg>');
+            background-size: cover;
+        }
+
+        /* NOVO: Player de Repertório Interativo */
+        .repertorio-interativo {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 50px auto;
+            max-width: 1000px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .player-repertorio {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .categorias-lista {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .categoria-btn {
+            width: 100%;
+            padding: 15px 20px;
+            background: transparent;
+            border: none;
+            color: var(--branco);
+            text-align: left;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .categoria-btn:hover,
+        .categoria-btn.active {
+            background: var(--degrade-principal);
+        }
+
+        .musicas-lista {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        .musica-item {
+            padding: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .musica-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateX(5px);
+        }
+
+        .musica-item:last-child {
+            border-bottom: none;
+        }
+
+        .musica-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--degrade-principal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--branco);
+        }
+
+        .musica-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--branco);
+        }
+
+        .musica-info p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            color: var(--branco);
+        }
+
+        /* NOVA SEÇÃO: Timeline de Eventos */
+        .timeline {
+            padding: 100px 0;
+            background: var(--cinza-claro);
+        }
+
+        .timeline-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--degrade-principal);
+        }
+
+        .timeline-item {
+            background: var(--branco);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            width: calc(50% - 40px);
+        }
+
+        .timeline-item:nth-child(odd) {
+            margin-left: auto;
+        }
+
+        .timeline-item:nth-child(even) {
+            margin-right: auto;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            background: var(--degrade-principal);
+            border-radius: 50%;
+        }
+
+        .timeline-item:nth-child(odd)::before {
+            right: -50px;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            left: -50px;
+        }
+
+        .timeline-content h3 {
+            color: var(--roxo-principal);
+            margin-bottom: 10px;
+        }
+
+        /* Serviços */
+        .servicos {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--cinza-claro) 0%, var(--branco) 100%);
+            position: relative;
+        }
+
+        .servicos::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.03"><polygon fill="%23FF6B00" points="500,0 1000,500 500,1000 0,500"/></svg>');
+            background-size: cover;
+        }
+
+        .servicos-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card {
+            background: var(--branco);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-img img {
+            transform: scale(1.1);
+        }
+
+        .card-img .icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--degrade-principal);
+            color: var(--branco);
+            border-radius: 50%;
+            padding: 15px;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 2;
+        }
+
+        .card-body {
+            padding: 30px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-body h3 {
+            font-size: 1.7rem;
+            margin-bottom: 15px;
+            color: var(--roxo-principal);
+        }
+
+        .card-body p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .card-body ul {
+            list-style: none;
+            margin: 20px 0;
+            padding: 0;
+        }
+
+        .card-body li {
+            margin: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1rem;
+        }
+
+        .card-body li:before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: var(--laranja-principal);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .card-body .btn {
+            align-self: center;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* PLAYER DE ÁUDIO MELHORADO */
+        .audio-player {
+            background: var(--branco);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            margin: 50px auto;
+            max-width: 600px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .audio-player::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--degrade-principal);
+        }
+
+        .player-title {
+            color: var(--roxo-principal);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .player-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .play-btn {
+            background: var(--degrade-principal);
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+        }
+
+        .play-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(255, 107, 0, 0.4);
+        }
+
+        .progress-bar {
+            flex: 1;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .progress {
+            height: 100%;
+            background: var(--degrade-principal);
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+
+        .time-display {
+            color: var(--cinza-escuro);
+            font-size: 0.9rem;
+            min-width: 100px;
+        }
+
+        .track-info {
+            margin-top: 15px;
+            color: var(--cinza-escuro);
+        }
+
+        /* Galeria de Fotos Aprimorada */
+        .galeria {
+            padding: 100px 0;
+            background: var(--cinza-claro);
+        }
+
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .galeria-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            aspect-ratio: 1;
+        }
+
+        .galeria-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .galeria-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .galeria-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .galeria-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .galeria-item:hover .galeria-overlay {
+            transform: translateY(0);
+        }
+
+        /* NOVA SEÇÃO: Depoimentos */
+        .depoimentos {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--cinza-escuro) 0%, var(--preto) 100%);
+            color: var(--branco);
+        }
+
+        .depoimentos-carrossel {
+            max-width: 800px;
+            margin: 50px auto 0;
+            position: relative;
+        }
+
+        .depoimento-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .depoimento-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .depoimento-autor {
+            font-weight: 600;
+            color: var(--laranja-principal);
+        }
+
+        .depoimento-evento {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 100px 0;
+            background: var(--cinza-claro);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--branco);
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 25px;
+            background: var(--degrade-principal);
+            color: var(--branco);
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: var(--degrade-secundario);
+        }
+
+        .faq-answer {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-answer.active {
+            padding: 25px;
+            max-height: 500px;
+        }
+
+        /* Política de Cancelamento */
+        .politica {
+            padding: 80px 0;
+            background: var(--cinza-claro);
+        }
+
+        .politica-container {
+            background: var(--branco);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .politica-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .politica-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .politica-item h4 {
+            color: var(--roxo-principal);
+            margin-bottom: 10px;
+        }
+
+        /* Contato Section */
+        .contato {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--cinza-escuro) 0%, var(--preto) 100%);
+            color: var(--branco);
+            position: relative;
+        }
+
+        .contato::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.03"><path fill="%23FFFFFF" d="M0,0 L1000,0 L1000,1000 L0,1000 Z M100,100 L900,100 L900,900 L100,900 Z" fill-rule="evenodd"/></svg>');
+            background-size: cover;
+        }
+
+        .contato-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 60px;
+            margin-top: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .info-contato {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .info-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(10px);
+        }
+
+        .info-item i {
+            background: var(--degrade-principal);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.8rem;
+            min-width: 40px;
+        }
+
+        .form-contato {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--branco);
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            border: 1px solid transparent;
+        }
+
+        .form-control:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 0 2px var(--laranja-principal);
+            border-color: var(--laranja-principal);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Estilos para links de contato */
+        .contact-link {
+            color: var(--branco);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+            padding-bottom: 2px;
+        }
+
+        .contact-link:hover {
+            color: var(--laranja-principal);
+            border-bottom: 1px solid var(--laranja-principal);
+            transform: translateX(5px);
+        }
+
+        /* Indicador visual de que é clicável */
+        .info-item a {
+            position: relative;
+        }
+
+        .info-item a::after {
+            content: '🔗';
+            margin-left: 8px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .info-item a:hover::after {
+            opacity: 1;
+        }
+        
+        /* Estilo do SELECT */
+        #evento {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--branco);
+            border: 1px solid transparent;
+            padding: 15px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 20px;
+        }
+
+        #evento option {
+            background-color: #333;
+            color: var(--branco);
+            padding: 10px;
+        }
+
+        .evento-selecionado {
+            background-color: rgba(255, 107, 0, 0.2) !important;
+            border-color: var(--laranja-principal) !important;
+            color: var(--laranja-principal) !important;
+            font-weight: 600;
+        }
+
+        /* BOTÕES WHATSAPP FLUTUANTES */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            color: white;
+            border-radius: 50px;
+            padding: 15px 20px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-business {
+            position: fixed;
+            bottom: 100px;
+            right: 25px;
+            background: var(--degrade-principal);
+            color: white;
+            border-radius: 50px;
+            padding: 12px 20px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(255, 107, 0, 0.4);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .whatsapp-business:hover {
+            transform: scale(1.05);
+        }
+
+        /* PÁGINA DE CONFIRMAÇÃO */
+        .confirmation-page {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--cinza-escuro) 0%, var(--preto) 100%);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .confirmation-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 60px 50px;
+            max-width: 650px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: slideUp 0.8s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .confirmation-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: var(--degrade-principal);
+            opacity: 0.05;
+            transform: rotate(45deg);
+            z-index: -1;
+        }
+
+        .confirmation-icon {
+            width: 120px;
+            height: 120px;
+            background: var(--degrade-principal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            animation: bounceIn 1s ease;
+            box-shadow: 0 10px 30px rgba(255, 107, 0, 0.4);
+        }
+
+        .confirmation-icon i {
+            font-size: 3.5rem;
+            color: var(--branco);
+        }
+
+        .confirmation-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+            background: var(--degrade-principal);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 800;
+        }
+
+        .confirmation-message {
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+            color: var(--branco);
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            color: var(--laranja-principal);
+            font-weight: 600;
+        }
+
+        .confirmation-details {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 35px 0;
+            text-align: left;
+            border-left: 4px solid var(--laranja-principal);
+        }
+
+        .detail-item {
+            margin-bottom: 18px;
+            color: var(--branco);
+            display: flex;
+            align-items: center;
+        }
+
+        .detail-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: var(--laranja-claro);
+            margin-right: 15px;
+            min-width: 120px;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 35px;
+        }
+
+        .btn-confirmacao {
+            background: transparent;
+            border: 2px solid var(--laranja-principal);
+            color: var(--laranja-principal);
+            box-shadow: none;
+        }
+
+        .btn-confirmacao:hover {
+            background: var(--laranja-principal);
+            color: var(--branco);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--preto);
+            color: var(--branco);
+            padding: 60px 0 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--degrade-principal);
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--degrade-principal);
+            color: var(--branco);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.3rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-links a:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .copyright {
+            font-size: 1rem;
+            opacity: 0.7;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+        }
+
+        /* Efeito de Partículas */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+        }
+
+        /* Animações */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsividade */
+        @media (max-width: 1200px) {
+            .hero-content h2 {
+                font-size: 3.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .sobre-conteudo {
+                flex-direction: column;
+            }
+            
+            .hero-content h2 {
+                font-size: 3rem;
+            }
+            
+            .estatisticas {
+                justify-content: center;
+            }
+            
+            .sobre-imagem {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .player-repertorio {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-container::before {
+                left: 30px;
+            }
+
+            .timeline-item {
+                width: calc(100% - 80px);
+                margin-left: 80px !important;
+            }
+
+            .timeline-item::before {
+                left: -50px !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100vh;
+                width: 80%;
+                flex-direction: column;
+                background: var(--cinza-escuro);
+                align-items: center;
+                justify-content: center;
+                transition: right 0.4s ease;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+                z-index: 1000;
+            }
+            
+            nav ul.show {
+                right: 0;
+            }
+            
+            .menu-mobile {
+                display: block;
+            }
+            
+            .hero-content h2 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+            
+            .botoes {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                margin-bottom: 1rem;
+            }
+            
+            .estatisticas {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .confirmation-title {
+                font-size: 2.2rem;
+            }
+            
+            .confirmation-message {
+                font-size: 1.1rem;
+            }
+            
+            .btn-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+            
+            .servicos-cards,
+            .contato-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .card {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .confirmation-container {
+                padding: 40px 30px;
+            }
+
+            .whatsapp-float {
+                bottom: 15px;
+                right: 15px;
+                padding: 12px 16px;
+                font-size: 0.9rem;
+            }
+
+            .galeria-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+
+            .cta-destaque .btn {
+                margin: 10px 0;
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .hero-social {
+                gap: 20px;
+            }
+
+            .hero-social a {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+            }
+
+            .diferenciais-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .contato-container {
+                grid-template-columns: 1fr;
+            }
+
+            .confirmation-title {
+                font-size: 2rem;
+            }
+            
+            .confirmation-icon {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .confirmation-icon i {
+                font-size: 2.5rem;
+            }
+            
+            .confirmation-container {
+                padding: 30px 20px;
+            }
+            
+            .confirmation-details {
+                padding: 20px;
+            }
+            
+            .detail-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+            
+            .detail-label {
+                min-width: auto;
+            }
+            
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .form-contato {
+                padding: 25px;
+            }
+
+            .whatsapp-float span {
+                display: none;
+            }
+
+            .whatsapp-float {
+                padding: 15px;
+            }
+
+            .whatsapp-business {
+                bottom: 80px;
+                right: 15px;
+                padding: 10px 15px;
+                font-size: 0.8rem;
+            }
+
+            .whatsapp-business span {
+                display: none;
+            }
+
+            .politica-container {
+                padding: 25px;
+            }
+
+            .hero-social {
+                gap: 15px;
+            }
+
+            .hero-social a {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+            }
+
+            .repertorio-interativo {
+                padding: 20px;
+            }
+        }
+
+        /* CORREÇÃO PARA IMAGENS - Adicione no CSS */
+.lazy-load {
+    opacity: 1 !important; /* Remove a opacidade inicial */
+    transform: translateY(0) !important;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Garante que as imagens apareçam mesmo sem JavaScript */
+.no-js .lazy-load {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* Fallback para imagens quebradas */
+img {
+    background-color: var(--cinza-claro);
+    min-height: 200px;
+}
+
+img:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--cinza-claro);
+    border: 2px dotted var(--cinza-medio);
+}
+
+img:after {
+    content: "🎵 Imagem do Evento";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--cinza-medio);
+    font-size: 14px;
+    text-align: center;
+}
+/* CORREÇÃO PARA IMAGENS - Adicione no CSS */
+        .lazy-load {
+            opacity: 1 !important; /* Remove a opacidade inicial */
+            transform: translateY(0) !important;
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        /* Garante que as imagens apareçam mesmo sem JavaScript */
+        .no-js .lazy-load {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+
+        /* Fallback para imagens quebradas */
+        img {
+            background-color: var(--cinza-claro);
+            min-height: 200px;
+        }
+
+        img:before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: var(--cinza-claro);
+            border: 2px dotted var(--cinza-medio);
+        }
+
+        img:after {
+            content: "🎵 Imagem do Evento";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--cinza-medio);
+            font-size: 14px;
+            text-align: center;
+        }
+    /* CORREÇÃO PARA HEADER COBRINDO O HERO */
+body {
+    padding-top: 80px; /* Compensa a altura do header */
+}
+
+.hero {
+    margin-top: -80px; /* Remove a margem extra do hero */
+    height: calc(100vh + 80px); /* Ajusta a altura considerando o padding do body */
+}
+
+/* Garante que as âncoras scrollam para o lugar certo */
+html {
+    scroll-padding-top: 80px;
+}
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <h2>SoundHub</h2>
+            <p>Preparando a experiência musical...</p>
+        </div>
+    </div>
+
+    <!-- PÁGINA PRINCIPAL -->
+    <div id="pagina-principal">
+        <!-- Efeito de Partículas -->
+        <div class="particles" id="particles"></div>
+        
+        <!-- BOTÕES WHATSAPP -->
+        <a href="https://api.whatsapp.com/send/?phone=5516992659919&text=Olá! Gostaria de mais informações sobre seus serviços musicais." 
+           class="whatsapp-float" 
+           target="_blank"
+           title="Fale conosco no WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span>Fale conosco</span>
+        </a>
+
+        <a href="https://api.whatsapp.com/send/?phone=5516992659919&text=Olá! Gostaria de verificar disponibilidade para uma data." 
+           class="whatsapp-business" 
+           target="_blank"
+           title="Verificar disponibilidade">
+            <i class="fas fa-calendar-check"></i>
+            <span>Verificar Data</span>
+        </a>
+        
+        <header>
+            <div class="logo">
+                <h1>SoundHub</h1>
+                <p>Marko Junior é pop, é rock, é único!!</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#diferenciais">Diferenciais</a></li>
+                    <li><a href="#repertorio">Repertório</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <button class="menu-mobile">☰</button>
+            </nav>
+        </header>
+        
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h2>A trilha sonora perfeita para seu evento</h2>
+                <p>Mais de 20 anos criando experiências musicais inesquecíveis em casamentos, eventos corporativos e celebrações especiais</p>
+                <div class="botoes">
+                    <a href="#repertorio" class="btn"><i class="fas fa-music"></i> Explorar Repertório</a>
+                    <a href="#contato" class="btn btn-outline"><i class="fas fa-calendar-check"></i> Reservar Agora</a>
+                </div>
+                
+                <!-- NOVO: Contador de Visitantes -->
+                <div class="contador-visitantes">
+                    <i class="fas fa-eye"></i>
+                    <span><strong id="contador">0</strong> pessoas já exploraram este site</span>
+                </div>
+                
+                <!-- REDES SOCIAIS NO HERO -->
+                <div class="hero-social">
+                    <a href="https://www.instagram.com/markojuniorcantor" 
+                       class="instagram" 
+                       target="_blank"
+                       title="Siga no Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com/@cantormarkojunior" 
+                       class="youtube" 
+                       target="_blank"
+                       title="Inscreva-se no YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=5516992659919" 
+                       class="whatsapp" 
+                       target="_blank"
+                       title="Envie uma mensagem">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA DESTAQUE -->
+        <section class="cta-destaque">
+            <div class="container">
+                <h2 style="color: white; margin-bottom: 30px;">Pronto para transformar seu evento?</h2>
+                <p style="color: white; margin-bottom: 40px; font-size: 1.2rem;">Garanta a trilha sonora perfeita com mais de 20 anos de experiência</p>
+                <div class="botoes">
+                    <a href="https://api.whatsapp.com/send/?phone=5516992659919" class="btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp Rápido
+                    </a>
+                    <a href="#contato" class="btn">
+                        <i class="fas fa-envelope"></i> Solicitar Orçamento
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="sobre" class="sobre">
+            <div class="container">
+                <h2 class="section-title">Conheça Marko Júnior</h2>
+                <p class="section-subtitle">Mais de 20 anos criando experiências musicais inesquecíveis para os momentos mais especiais.</p>
+                
+                <div class="sobre-conteudo">
+                    <div class="sobre-texto">
+                        <p>Com mais de 20 anos de estrada, Marko Júnior sabe como transformar qualquer momento em uma experiência única. Apaixonado por música, ele passeia por vários estilos e gêneros com naturalidade, indo dos clássicos que nunca saem de moda até os hits do momento. O resultado? Energia, emoção e uma vibe que marca cada apresentação.</p>
+                        <p>Desde cedo, a música faz parte da vida de Marko Júnior. Com o passar dos anos, ele transformou essa paixão em um talento especial: sentir a energia do público e do ambiente para criar a trilha sonora perfeita em cada momento. Seu feeling único garante que todo evento seja inesquecível — do primeiro acorde até o último hit.</p>                    
+
+                        <div class="estatisticas">
+                            <div class="estatistica-item">
+                                <span class="numero">1.200+</span>
+                                <span class="label">Eventos Realizados</span>
+                            </div>
+                            <div class="estatistica-item">
+                                <span class="numero">20</span>
+                                <span class="label">Anos de Experiência</span>
+                            </div>
+                            <div class="estatistica-item">
+                                <span class="numero">100%</span>
+                                <span class="label">Clientes Satisfeitos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sobre-imagem">
+                        <img src="imagens/1000022917.jpg" alt="Marko Junior - Músico Profissional" class="lazy-load">
+                    </div>
+                </div>
+            </div>   
+        </section>
+
+        <!-- NOVA SEÇÃO: Diferenciais -->
+        <section id="diferenciais" class="diferenciais">
+            <div class="container">
+                <h2 class="section-title">Por que Escolher Marko Junior?</h2>
+                <p class="section-subtitle" style="color: var(--preto);">Diferenciais que fazem a diferença no seu evento</p>
+                
+                <div class="diferenciais-grid">
+                    <div class="diferencial-card">
+                        <div class="diferencial-icon">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <h3>Som Profissional</h3>
+                        <p>Equipamento de alta qualidade para garantir o melhor áudio do seu evento</p>
+                    </div>
+                    
+                    <div class="diferencial-card">
+                        <div class="diferencial-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3>Repertório Personalizado</h3>
+                        <p>Playlist adaptada ao seu gosto e ao perfil dos convidados</p>
+                    </div>
+                    
+                    <div class="diferencial-card">
+                        <div class="diferencial-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Energy & Professionalism</h3>
+                        <p>Combina energia contagiante com profissionalismo exemplar</p>
+                    </div>
+                    
+                    <div class="diferencial-card">
+                        <div class="diferencial-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Segurança e Confiança</h3>
+                        <p>Compromisso total com prazos e qualidade do serviço</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- REPERTÓRIO INTERATIVO - COMPLETAMENTE REFEITO -->
+        <section id="repertorio" class="repertorio">
+            <div class="container">
+                <h2 class="section-title">Repertório Exclusivo</h2>
+                <p class="section-subtitle">Explore nossa seleção musical e descubra a trilha sonora perfeita para seu evento</p>
+
+                <div class="repertorio-interativo">
+                    <div class="player-repertorio">
+                        <div class="categorias-lista">
+                            <button class="categoria-btn active" data-categoria="casamento">
+                                <i class="fas fa-ring"></i> Casamentos
+                            </button>
+                            <button class="categoria-btn" data-categoria="corporativo">
+                                <i class="fas fa-briefcase"></i> Corporativos
+                            </button>
+                            <button class="categoria-btn" data-categoria="festa">
+                                <i class="fas fa-glass-cheers"></i> Festas
+                            </button>
+                            <button class="categoria-btn" data-categoria="romantico">
+                                <i class="fas fa-heart"></i> Romântico
+                            </button>
+                            <button class="categoria-btn" data-categoria="animado">
+                                <i class="fas fa-fire"></i> Para Dançar
+                            </button>
+                        </div>
+                        
+                        <div class="musicas-lista" id="musicas-lista">
+                            <!-- As músicas serão carregadas dinamicamente via JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- PLAYER DE ÁUDIO SAMPLES MELHORADO -->
+        <section class="audio-player">
+            <h3 class="player-title">🎵 Ouça uma Amostra Exclusiva</h3>
+            <div class="player-controls">
+                <button class="play-btn" id="playBtn">
+                    <i class="fas fa-play"></i>
+                </button>
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <div class="time-display" id="timeDisplay">0:00 / 0:00</div>
+            </div>
+            <div class="track-info">
+                <p><strong>Demonstração Profissional</strong> - Mix Marko Junior</p>
+                <small>Experimente a qualidade e energia das minhas apresentações</small>
+            </div>
+            <audio id="audioPlayer" preload="metadata">
+                <!-- Arquivo de áudio substituto até ter o arquivo real -->
+                <source src="audio/Caça e Caçador - Marko Jr.wav" type="audio/wav">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </section>
+
+        <!-- NOVA SEÇÃO: Timeline de Processo -->
+        <section class="timeline">
+            <div class="container">
+                <h2 class="section-title">Como Funciona</h2>
+                <p class="section-subtitle" style="color: var(--preto);">Do primeiro contato até o grande dia</p>
+                
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>📞 Consulta Inicial</h3>
+                            <p>Conversamos sobre seu evento, expectativas e preferências musicais</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>🎵 Personalização</h3>
+                            <p>Criamos juntos a playlist perfeita para seu evento</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>📝 Confirmação</h3>
+                            <p>Assinatura do contrato e agendamento definitivo</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>🎉 O Grande Dia</h3>
+                            <p>Apresentação e criação de momentos inesquecíveis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="servicos" class="servicos">
+            <div class="container">
+                <h2 class="section-title">Serviços Exclusivos</h2>
+                <p class="section-subtitle" style="color: var(--preto);">Soluções completas para cada tipo de evento</p>
+
+                <div class="servicos-cards">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="imagens/Wolfe and francesca at the wedding _3.jpg" alt="Casamento" class="lazy-load">
+                            <span class="icon"><i class="fas fa-heart"></i></span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Casamentos</h3>
+                            <p>Cerimônia e recepção com repertório personalizado para o dia mais especial da sua vida.</p>
+                            <ul>
+                                <li>Música durante a cerimônia</li>
+                                <li>Recepção de convidados</li>
+                                <li>Repertório romântico personalizado</li>
+                                <li>Equipamento de alta qualidade</li>
+                                <li>Até 5 horas de apresentação</li>
+                            </ul>
+                            <button class="btn solicitar-orcamento" data-servico="casamento"><i class="fas fa-gift"></i> Solicitar Orçamento</button>
+                        </div> 
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="imagens/download (9).jpg" alt="Evento Corporativo" class="lazy-load">
+                            <span class="icon"><i class="fas fa-briefcase"></i></span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Eventos Corporativos</h3>
+                            <p>Profissionalismo e sofisticação para confraternizações empresariais e eventos corporativos.</p>
+                            <ul>
+                                <li>Repertório variado e atualizado</li>
+                                <li>1-2 horas de show ao vivo</li>
+                                <li>Acústico ou com banda completa</li>
+                                <li>Interação com o público</li>
+                                <li>Playlist personalizada</li>
+                            </ul>
+                            <button class="btn solicitar-orcamento" data-servico="corporativo"><i class="fas fa-glass-cheers"></i> Solicitar Orçamento</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="imagens/download (10).jpg" alt="Festa Particular" class="lazy-load">
+                            <span class="icon"><i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Shows Especiais</h3>
+                            <p>Aniversários, formaturas e celebrações especiais com performances únicas e memoráveis.</p>
+                            <ul>
+                                <li>1-2:30 horas de show</li>
+                                <li>Acústico ou com banda</li>
+                                <li>Repertório interativo (pedido dos convidados)</li>
+                                <li>Playlist personalizada para o evento</li>
+                                <li>Ambiente descontraído e animado</li>
+                            </ul>
+                            <button class="btn solicitar-orcamento" data-servico="shows"><i class="fas fa-birthday-cake"></i> Solicitar Orçamento</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- GALERIA DE FOTOS -->
+        <section id="galeria" class="galeria">
+            <div class="container">
+                <h2 class="section-title">Momentos Inesquecíveis</h2>
+                <p class="section-subtitle" style="color: var(--preto);">Galeria de eventos especiais criados com música e energia</p>
+                
+                <div class="galeria-grid">
+                    <div class="galeria-item">
+                        <img src="imagens/Imagem do WhatsApp de 2025-10-06 à(s) 23.40.48_0ccb4082.jpg" alt="Casamento Realizado" class="lazy-load">
+                        <div class="galeria-overlay">
+                            <span>Casamento Realizado</span>
+                        </div>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="imagens/IMG_5624[1].jpg" alt="Evento Corporativo" class="lazy-load">
+                        <div class="galeria-overlay">
+                            <span>Evento Corporativo</span>
+                        </div>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="imagens/Casamento_Julia_e_Matheus-1128[2].jpg" alt="Festa Particular" class="lazy-load">
+                        <div class="galeria-overlay">
+                            <span>Festa de Aniversário</span>
+                        </div>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="imagens/Marco Jr (23)[1].jpg" alt="Show ao Vivo" class="lazy-load">
+                        <div class="galeria-overlay">
+                            <span>Show ao Vivo</span>
+                        </div>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="imagens/Casamento_Julia_e_Matheus-1106[1].jpg" alt="Ambiente Musical" class="lazy-load">
+                        <div class="galeria-overlay">
+                            <span>Ambiente Musical</span>
+                        </div>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="imagens/Imagem do WhatsApp de 2025-10-05 à(s) 18.38.15_07a67146.jpg" alt="Momento Especial" class="lazy-load">
+                        <div class="galeria-overlay">
+                            <span>Momento Especial</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <p class="section-subtitle" style="color: var(--preto);">Tire suas dúvidas sobre nossos serviços</p>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Como é feito o agendamento?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>O agendamento é feito através de contato por WhatsApp, e-mail ou formulário do site. Após a confirmação da disponibilidade, enviamos um contrato e solicitamos um sinal para reservar a data.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Qual o prazo mínimo para contratação?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Recomendamos contratação com pelo menos 30 dias de antecedência, especialmente para casamentos. Para eventos de última hora, entre em contato para verificar disponibilidade.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Vocês fornecem o equipamento de som?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sim, fornecemos equipamento de som profissional completo adequado para o tamanho do seu evento. Inclui mesa de som, caixas acústicas, microfones e todos os cabos necessários.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>É possível personalizar o repertório?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Com certeza! Criamos uma playlist personalizada baseada nas suas preferências musicais. Você pode enviar uma lista de músicas que gostaria de ouvir e outra que prefere evitar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POLÍTICA DE CANCELAMENTO -->
+        <section id="politica" class="politica">
+            <div class="container">
+                <h2 class="section-title">Política de Cancelamento</h2>
+                <p class="section-subtitle" style="color: var(--preto);">Transparência e segurança em nossas negociações</p>
+                
+                <div class="politica-container">
+                    <div class="politica-item">
+                        <h4>Cancelamento pelo Cliente</h4>
+                        <p>Em caso de cancelamento pelo cliente, o sinal não será reembolsável. Para cancelamentos com mais de 30 dias de antecedência, oferecemos a possibilidade de remarcação para outra data disponível.</p>
+                    </div>
+                    
+                    <div class="politica-item">
+                        <h4>Cancelamento pelo Artista</h4>
+                        <p>Em caso de cancelamento por nossa parte, devolvemos 100% do valor pago e ajudamos na busca por um profissional substituto de mesma qualidade.</p>
+                    </div>
+                    
+                    <div class="politica-item">
+                        <h4>Remarcação</h4>
+                        <p>Remarcações são possíveis mediante disponibilidade de agenda e devem ser solicitadas com pelo menos 15 dias de antecedência.</p>
+                    </div>
+                    
+                    <div class="politica-item">
+                        <h4>Casos de Força Maior</h4>
+                        <p>Para casos comprovados de força maior (condições climáticas extremas, problemas de saúde), avaliamos individualmente cada situação.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contato" class="contato">
+            <div class="container">
+                <h2 class="section-title">Vamos Conversar</h2>
+                <p class="section-subtitle">Entre em contato e vamos criar a trilha sonora perfeita para seu evento</p>
+                
+                <div class="contato-container">
+                    <div class="info-contato">
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Telefone/WhatsApp</h3>
+                                <a href="https://api.whatsapp.com/send/?phone=5516992659919&text=Olá! Gostaria de mais informações sobre seus serviços musicais." 
+                                   target="_blank" 
+                                   class="contact-link"
+                                   title="Clique para enviar mensagem no WhatsApp">
+                                    (16) 99265-9919
+                                </a>
+                                <small style="display: block; margin-top: 5px; opacity: 0.8;">Clique para conversar no WhatsApp</small>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>E-mail</h3>
+                                <a href="mailto:cantormarcojunior@gmail.com?subject=Contato via Site - Informações sobre Serviços&body=Olá Marko! Gostaria de mais informações sobre:" 
+                                   class="contact-link"
+                                   title="Clique para enviar email">
+                                    cantormarcojunior@gmail.com
+                                </a>
+                                <small style="display: block; margin-top: 5px; opacity: 0.8;">Clique para enviar email</small>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Localização</h3>
+                                <p>Ituverava, SP e região</p>
+                                <small style="display: block; margin-top: 5px; opacity: 0.8;">Atendemos toda a região</small>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>Horário de Atendimento</h3>
+                                <p>Segunda a Sexta: 9hr às 18hr</p>
+                                <p>Sábado: 9hr às 12hr</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-contato">
+                        <form id="formContato">
+                            <div class="form-group">
+                                <label for="nome">Nome Completo</label>
+                                <input type="text" id="nome" class="form-control" placeholder="Seu nome completo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" class="form-control" placeholder="seu@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" id="telefone" class="form-control" placeholder="(16) 99999-9999" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="evento">Tipo de Evento</label>
+                                <select id="evento" class="form-control" required>
+                                    <option value="">Selecione o tipo de evento</option>
+                                    <option value="casamento">Casamento</option>
+                                    <option value="corporativo">Evento Corporativo</option>
+                                    <option value="show">Show Especial</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="data">Data do Evento (Opcional)</label>
+                                <input type="date" id="data" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="mensagem">Mensagem</label>
+                                <textarea id="mensagem" class="form-control" placeholder="Conte-me mais sobre seu evento..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="logo">
+                        <h1>Marko Junior</h1>
+                        <p>Música que transforma momentos</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/markojuniorcantor"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@cantormarkojunior"><i class="fab fa-youtube"></i></a>
+                        <a href="https://api.whatsapp.com/send/?phone=5516992659919"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2024 Marko Junior. Todos os direitos reservados. | Desenvolvido com ❤️ e 🎵</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- PÁGINA DE CONFIRMAÇÃO -->
+    <div class="confirmation-page" id="confirmationPage">
+        <div class="confirmation-container">
+            <div class="confirmation-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            
+            <h1 class="confirmation-title">Mensagem Enviada!</h1>
+            
+            <p class="confirmation-message">
+                Obrigado pelo seu contato! Sua mensagem foi enviada com <span class="highlight">sucesso</span>.
+            </p>
+            
+            <div class="confirmation-details">
+                <div class="detail-item">
+                    <span class="detail-label">Status:</span>
+                    Mensagem recebida com sucesso
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Resposta:</span>
+                    Entraremos em contato em breve
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Tempo estimado:</span>
+                    24 horas
+                </div>
+            </div>
+            
+            <p class="confirmation-message">
+                Enquanto isso, que tal conhecer melhor meu <span class="highlight">repertório</span> ou explorar os <span class="highlight">serviços</span> disponíveis?
+            </p>
+            
+            <div class="btn-container">
+                <button class="btn" id="btnVerRepertorio">
+                    <i class="fas fa-music"></i> Ver Repertório
+                </button>
+                
+                <button class="btn btn-confirmacao" id="btnConhecerServicos">
+                    <i class="fas fa-list"></i> Conhecer Serviços
+                </button>
+                
+                <button class="btn btn-confirmacao" id="fecharConfirmacao">
+                    <i class="fas fa-times"></i> Fechar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ========== DADOS DO REPERTÓRIO ==========
+        const repertorioData = {
+            "casamento": [
+                {titulo: "Beauty and the Beast", artista: "Celine Dion", genero: "Romântico"},
+                {titulo: "Die With A Smile", artista: "Bruno Mars", genero: "Atual"},
+                {titulo: "Perfect", artista: "Ed Sheeran", genero: "Romântico"},
+                {titulo: "A Thousand Years", artista: "Christina Perri", genero: "Romântico"},
+                {titulo: "All of Me", artista: "John Legend", genero: "Romântico"}
+            ],
+            "corporativo": [
+                {titulo: "Blinding Lights", artista: "The Weeknd", genero: "Atual"},
+                {titulo: "Uptown Funk", artista: "Bruno Mars", genero: "Para Dançar"},
+                {titulo: "Happy", artista: "Pharrell Williams", genero: "Animado"},
+                {titulo: "Can't Stop the Feeling", artista: "Justin Timberlake", genero: "Animado"},
+                {titulo: "Don't Stop Believin'", artista: "Journey", genero: "Clássico"}
+            ],
+            "festa": [
+                {titulo: "Dancing Queen", artista: "ABBA", genero: "Para Dançar"},
+                {titulo: "I Wanna Dance with Somebody", artista: "Whitney Houston", genero: "Para Dançar"},
+                {titulo: "Billie Jean", artista: "Michael Jackson", genero: "Clássico"},
+                {titulo: "Shape of You", artista: "Ed Sheeran", genero: "Atual"},
+                {titulo: "Levitating", artista: "Dua Lipa", genero: "Atual"}
+            ],
+            "romantico": [
+                {titulo: "Unchained Melody", artista: "Righteous Brothers", genero: "Romântico"},
+                {titulo: "My Heart Will Go On", artista: "Celine Dion", genero: "Romântico"},
+                {titulo: "Stand by Me", artista: "Ben E. King", genero: "Romântico"},
+                {titulo: "At Last", artista: "Etta James", genero: "Romântico"},
+                {titulo: "Wonderful Tonight", artista: "Eric Clapton", genero: "Romântico"}
+            ],
+            "animado": [
+                {titulo: "Whisky A Go Go", artista: "Roupa Nova", genero: "Clássico"},
+                {titulo: "Sweet Child O' Mine", artista: "Guns N' Roses", genero: "Rock"},
+                {titulo: "Livin' on a Prayer", artista: "Bon Jovi", genero: "Rock"},
+                {titulo: "September", artista: "Earth, Wind & Fire", genero: "Para Dançar"},
+                {titulo: "I Gotta Feeling", artista: "Black Eyed Peas", genero: "Para Dançar"}
+            ]
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elementos do DOM
+            const loader = document.getElementById('loader');
+            const menuButton = document.querySelector('.menu-mobile');
+            const nav = document.querySelector('nav ul');
+            const header = document.querySelector('header');
+            const form = document.getElementById('formContato');
+            const confirmationPage = document.getElementById('confirmationPage');
+            const fecharConfirmacao = document.getElementById('fecharConfirmacao');
+            const btnVerRepertorio = document.getElementById('btnVerRepertorio');
+            const btnConhecerServicos = document.getElementById('btnConhecerServicos');
+            const selectEvento = document.getElementById('evento');
+            const botoesSolicitar = document.querySelectorAll('.solicitar-orcamento');
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            const contadorElement = document.getElementById('contador');
+            const musicasLista = document.getElementById('musicas-lista');
+
+            // ========== SISTEMA DE REPERTÓRIO DINÂMICO ==========
+            function carregarMusicas(categoria) {
+                musicasLista.innerHTML = '';
+                
+                if (repertorioData[categoria]) {
+                    repertorioData[categoria].forEach(musica => {
+                        const musicaItem = document.createElement('div');
+                        musicaItem.className = 'musica-item';
+                        musicaItem.innerHTML = `
+                            <div class="musica-icon">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <div class="musica-info">
+                                <h4>${musica.titulo}</h4>
+                                <p>${musica.artista} · ${musica.genero}</p>
+                            </div>
+                        `;
+                        musicasLista.appendChild(musicaItem);
+                    });
+                }
+            }
+
+            // ========== NOVO: Contador de Visitantes ==========
+            function atualizarContador() {
+                let visitas = localStorage.getItem('visitas_marko');
+                if (!visitas) {
+                    visitas = 1;
+                } else {
+                    visitas = parseInt(visitas) + 1;
+                }
+                localStorage.setItem('visitas_marko', visitas);
+                
+                // Animação do contador
+                let contador = 0;
+                const intervalo = setInterval(() => {
+                    contadorElement.textContent = contador;
+                    contador++;
+                    if (contador > visitas) {
+                        clearInterval(intervalo);
+                    }
+                }, 50);
+            }
+
+            // ========== PLAYER DE ÁUDIO ==========
+            const audioPlayer = document.getElementById('audioPlayer');
+            const playBtn = document.getElementById('playBtn');
+            const progress = document.getElementById('progress');
+            const progressBar = document.getElementById('progressBar');
+            const timeDisplay = document.getElementById('timeDisplay');
+
+            // Controles do player de áudio
+            playBtn.addEventListener('click', function() {
+                if (audioPlayer.paused) {
+                    audioPlayer.play();
+                    playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                } else {
+                    audioPlayer.pause();
+                    playBtn.innerHTML = '<i class="fas fa-play"></i>';
+                }
+            });
+
+            // Atualizar barra de progresso
+            audioPlayer.addEventListener('timeupdate', function() {
+                const percent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+                progress.style.width = percent + '%';
+                
+                const currentTime = formatTime(audioPlayer.currentTime);
+                const duration = formatTime(audioPlayer.duration);
+                timeDisplay.textContent = `${currentTime} / ${duration}`;
+            });
+
+            // Clique na barra de progresso
+            progressBar.addEventListener('click', function(e) {
+                const rect = progressBar.getBoundingClientRect();
+                const percent = (e.clientX - rect.left) / rect.width;
+                audioPlayer.currentTime = percent * audioPlayer.duration;
+            });
+
+            // Função para formatar tempo
+            function formatTime(seconds) {
+                const min = Math.floor(seconds / 60);
+                const sec = Math.floor(seconds % 60);
+                return `${min}:${sec.toString().padStart(2, '0')}`;
+            }
+
+            // ========== NOVO: Repertório Interativo ==========
+            const categoriaBtns = document.querySelectorAll('.categoria-btn');
+
+            categoriaBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active de todos os botões
+                    categoriaBtns.forEach(b => b.classList.remove('active'));
+                    // Adiciona active ao botão clicado
+                    this.classList.add('active');
+                    
+                    // Carrega as músicas da categoria selecionada
+                    const categoria = this.getAttribute('data-categoria');
+                    carregarMusicas(categoria);
+                });
+            });
+
+            // ========== FAQ INTERATIVO ==========
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    // Fechar outras respostas
+                    document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                        if (otherAnswer !== answer) {
+                            otherAnswer.classList.remove('active');
+                            otherAnswer.previousElementSibling.querySelector('i').className = 'fas fa-chevron-down';
+                        }
+                    });
+                    
+                    // Alternar resposta atual
+                    answer.classList.toggle('active');
+                    icon.className = answer.classList.contains('active') ? 'fas fa-chevron-up' : 'fas fa-chevron-down';
+                });
+            });
+
+            // ========== LAZY LOADING ==========
+            function lazyLoad() {
+                const lazyImages = document.querySelectorAll('.lazy-load');
+                
+                // Carregamento imediato para imagens acima da dobra
+                lazyImages.forEach(img => {
+                    if (img.getBoundingClientRect().top < window.innerHeight) {
+                        img.classList.add('loaded');
+                    }
+                });
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('loaded');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    rootMargin: '50px 0px', // Carrega 50px antes de entrar na tela
+                    threshold: 0.1
+                });
+                
+                lazyImages.forEach(img => {
+                    observer.observe(img);
+                });
+            }
+
+            // ========== CRM SIMPLES (Local Storage) ==========
+            function salvarLead(dados) {
+                const leads = JSON.parse(localStorage.getItem('leads_marko') || '[]');
+                dados.id = Date.now();
+                dados.data = new Date().toISOString();
+                leads.push(dados);
+                localStorage.setItem('leads_marko', JSON.stringify(leads));
+                
+                // Google Analytics Event (simulado)
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'form_submission', {
+                        'event_category': 'lead',
+                        'event_label': dados.evento
+                    });
+                }
+            }
+
+            // ========== ENVIO DE FORMULÁRIO ==========
+            function enviarFormulario(dados) {
+                // Aqui você pode integrar com EmailJS, FormSubmit ou outro serviço
+                console.log('Dados do formulário:', dados);
+                
+                // Simulação de envio bem-sucedido
+                return new Promise((resolve) => {
+                    setTimeout(() => {
+                        resolve(true);
+                    }, 1000);
+                });
+            }
+
+            // ========== INICIALIZAÇÃO ==========
+            // Carregar músicas iniciais (casamento)
+            carregarMusicas('casamento');
+            lazyLoad();
+            atualizarContador();
+
+            // Loader
+            setTimeout(() => {
+                loader.classList.add('hidden');
+            }, 2000);
+
+            // Menu mobile toggle
+            menuButton.addEventListener('click', function() {
+                nav.classList.toggle('show');
+                menuButton.innerHTML = nav.classList.contains('show') ? '✕' : '☰';
+            });
+
+            // Smooth scroll para links de navegação
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            for (let link of links) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        nav.classList.remove('show');
+                        menuButton.innerHTML = '☰';
+                    }
+                });
+            }
+            
+            // Header scroll effect
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+            // Animação de elementos ao scroll
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observar elementos para animação
+            document.querySelectorAll('.categoria, .estatistica-item, .sobre-imagem, .card, .galeria-item, .faq-item, .politica-item, .diferencial-card, .timeline-item').forEach(function(el) {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+            
+            // Form submission
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Coletar dados do formulário
+                const dadosForm = {
+                    nome: document.getElementById('nome').value,
+                    email: document.getElementById('email').value,
+                    telefone: document.getElementById('telefone').value,
+                    evento: document.getElementById('evento').value,
+                    data: document.getElementById('data').value,
+                    mensagem: document.getElementById('mensagem').value
+                };
+                
+                // Salvar no CRM simples
+                salvarLead(dadosForm);
+                
+                // Enviar formulário
+                const enviado = await enviarFormulario(dadosForm);
+                
+                if (enviado) {
+                    confirmationPage.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                    form.reset();
+                }
+            });
+            
+            // Fechar página de confirmação
+            function fecharConfirmacaoPage() {
+                confirmationPage.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+
+            fecharConfirmacao.addEventListener('click', fecharConfirmacaoPage);
+
+            // Botão Ver Repertório - Fecha confirmação e vai para a seção
+            btnVerRepertorio.addEventListener('click', function() {
+                fecharConfirmacaoPage();
+                
+                setTimeout(() => {
+                    document.getElementById('repertorio').scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, 300);
+            });
+
+            // Botão Conhecer Serviços - Fecha confirmação e vai para a seção
+            btnConhecerServicos.addEventListener('click', function() {
+                fecharConfirmacaoPage();
+                
+                setTimeout(() => {
+                    document.getElementById('servicos').scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, 300);
+            });
+
+            // Botões de solicitar orçamento
+            botoesSolicitar.forEach(botao => {
+                botao.addEventListener('click', function() {
+                    const servico = this.getAttribute('data-servico');
+                    
+                    document.getElementById('contato').scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    selectEvento.value = servico;
+                    selectEvento.classList.add('evento-selecionado');
+                    
+                    setTimeout(() => {
+                        selectEvento.classList.remove('evento-selecionado');
+                    }, 3000);
+                });
+            });
+
+            // Máscara para telefone
+            const telefoneInput = document.getElementById('telefone');
+            telefoneInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length <= 11) {
+                    value = value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+                    e.target.value = value;
+                }
+            });
+
+            // Criar partículas
+            function criarParticulas() {
+                const particlesContainer = document.getElementById('particles');
+                const particleCount = 30;
+                
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.classList.add('particle');
+                    
+                    const size = Math.random() * 5 + 2;
+                    particle.style.width = `${size}px`;
+                    particle.style.height = `${size}px`;
+                    
+                    particle.style.left = `${Math.random() * 100}%`;
+                    
+                    const duration = Math.random() * 20 + 10;
+                    const delay = Math.random() * 5;
+                    particle.style.animationDuration = `${duration}s`;
+                    particle.style.animationDelay = `${delay}s`;
+                    
+                    particle.style.opacity = Math.random() * 0.5 + 0.1;
+                    
+                    particlesContainer.appendChild(particle);
+                }
+            }
+            
+            // Inicializar partículas
+            criarParticulas();
+
+            // Fechar confirmação ao clicar fora do container
+            confirmationPage.addEventListener('click', function(e) {
+                if (e.target === confirmationPage) {
+                    fecharConfirmacaoPage();
+                }
+            });
+
+            // Fechar com tecla ESC
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && confirmationPage.style.display === 'flex') {
+                    fecharConfirmacaoPage();
+                }
+            });
+
+            // Tracking de cliques nos botões do WhatsApp
+            document.querySelectorAll('.whatsapp-float, .whatsapp-business, .hero-social a').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'social_click', {
+                            'event_category': 'engagement',
+                            'event_label': this.getAttribute('title') || this.className
+                        });
+                    }
+                });
+            });
+
+            // NOVO: Efeito de digitação no hero
+            function typeWriter(element, text, speed = 50) {
+                let i = 0;
+                element.innerHTML = '';
+                
+                function type() {
+                    if (i < text.length) {
+                        element.innerHTML += text.charAt(i);
+                        i++;
+                        setTimeout(type, speed);
+                    }
+                }
+                type();
+            }
+
+            // Iniciar efeito de digitação após o loader
+            setTimeout(() => {
+                const heroTitle = document.querySelector('.hero-content h2');
+                const originalText = heroTitle.textContent;
+                typeWriter(heroTitle, originalText);
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
